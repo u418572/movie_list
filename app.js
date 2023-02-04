@@ -13,10 +13,10 @@ app.use(express.static('public'))
 
 app.get('/', (req, res) => {
     
-   const numberList = [{
-    a:14},{a:15},{a:18}]
+  //  const numberList = [{
+  //   a:14},{a:15},{a:18}]
 
-  res.render('index', {movies: movieList.results, numbers: numberList})
+  res.render('index', {movies: movieList.results})
 })
 
 app.get('/movies/:movie_id', (req, res) => {
