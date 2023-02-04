@@ -1,11 +1,16 @@
-# Movie List
+# Movie_List 
 A simple web application for movie fanatic
 
+## AC 2-3 express practice
+
+## Included
+- node.js
+- express
+- handlebars
+
 ## Features
-- listing movies from movie api
-- searching movies by title
-- add movies to your favorite list
-- manage your favorite list
+- listing movies from movie api({{#each}})
+- searching movies by title (params)
 
 ### Searching
 type the title of the movies in search bar
