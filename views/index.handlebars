@@ -1,0 +1,50 @@
+
+{{#each numbers}}
+<div class="col-sm-3">
+  <a href="/{{this.a}}" class="text-secondary">
+    <div class="card mb-2">
+       
+      <div class="card-body movie-item-body">
+        <h6 class="card-title">{{this.a}}</h6>
+      </div>
+    </div>
+  </a>
+</div>
+
+{{/each}}
+
+<!-- ./views/index.handlebars -->
+
+{{!-- search bar --}}
+<div class="container mt-5">
+  <!-- search bar -->
+  <div class="row" id="search-bar">
+    <div class="col-12">
+      <form action="/search">
+        <div class="input-group mb-3">
+          <input type="text" name="keyword" class="form-control" placeholder="Enter movie name to search..."
+            aria-label="Movie Name..." aria-describedby="search-button" value="{{keyword}}">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit" id="search-button">Search</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- movie list -->
+  <div class="row" id="data-panel">
+    {{#each movies}}
+    <div class="col-sm-3">
+      <a href="/movies/{{this.id}}" class="text-secondary">
+        <div class="card mb-2">
+          <img class="card-img-top" src="https://movie-list.alphacamp.io/posters/{{this.image}}" alt="Card image cap">
+          <div class="card-body movie-item-body">
+            <h6 class="card-title">{{this.title}}</h6>
+          </div>
+        </div>
+      </a>
+    </div>
+    {{/each}}
+
+     
